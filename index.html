@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CodeLend">
+    <title>SURPRESA</title>
+    <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="sass/index.css">
+</head>
+
+<body>
+
+    <a href="html/casal.html" id="startButton">Surpresa</a>
+    <div id="loader"></div>
+
+    <footer>
+        <p>&copy; 2025 CodeLend. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const button = document.getElementById('startButton');
+        const loader = document.getElementById('loader');
+
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            button.style.display = 'none';
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                window.location.href = button.getAttribute('href');
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>
