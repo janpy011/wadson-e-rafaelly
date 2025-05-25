@@ -4,21 +4,31 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="CodeLend">
+    <meta name="author" content="CodeLend" />
     <title>Nossa História</title>
     <link rel="stylesheet" href="../sass/casal.css" />
-    <link rel="shortcut icon" href="../img/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/icone.ico" type="image/x-icon" />
 </head>
 
 <body>
-    <main>
+    <div id="playButtonOverlay">
+        <button id="playButton">Não existem palavras para descrever o quanto eu te amo.</button>
+    </div>
 
+    <main>
         <section class="carousel">
             <div class="carousel-container fade-in">
                 <img src="../img/img1.jpg" alt="Momentos" class="carousel-image active" />
                 <img src="../img/img2.jpg" alt="Momentos" class="carousel-image" />
                 <img src="../img/img3.jpg" alt="Momentos" class="carousel-image" />
             </div>
+        </section>
+
+        <section class="musica fade-in">
+            <audio id="romantic-audio" controls>
+                <source src="../img/musica.mp3" type="audio/mp3" />
+                Seu navegador não suporta áudio.
+            </audio>
         </section>
 
         <section class="romantic-text fade-in">
@@ -38,6 +48,7 @@
         </section>
 
         <section class="final-message">
+            <h3>Manuela Alves</h3>
             <h2 class="fade-in">Eu te amo</h2>
         </section>
 

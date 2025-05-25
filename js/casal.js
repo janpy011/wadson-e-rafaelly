@@ -6,8 +6,7 @@ function showNextImage() {
     current = (current + 1) % images.length;
     images[current].classList.add('active');
 }
-
-setInterval(showNextImage, 1500);
+setInterval(showNextImage, 2500);
 
 const startDate = new Date('2022-04-30');
 const yearsSpan = document.getElementById('years');
@@ -45,5 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             el.classList.add('visible');
         }, 300 * index);
+    });
+
+    const audio = document.getElementById('romantic-audio');
+    const overlay = document.getElementById('playButtonOverlay');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+        audio.play().catch(() => { });
+        overlay.style.display = 'none';
     });
 });

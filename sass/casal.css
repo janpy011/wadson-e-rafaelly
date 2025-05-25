@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background: #111;
+  background: #000;
   color: #ffffff;
 }
 
@@ -25,6 +25,17 @@ main {
   gap: 50px;
   padding: 50px;
   margin-bottom: 100px;
+}
+
+.musica {
+  text-align: center;
+  padding: 2rem 0;
+}
+.musica audio {
+  width: 90%;
+  max-width: 400px;
+  outline: none;
+  filter: drop-shadow(0 0 8px crimson);
 }
 
 .carousel {
@@ -61,15 +72,17 @@ main {
 
 .romantic-text {
   text-align: center;
+  margin-top: -220px;
 }
 .romantic-text h1 {
   font-family: "Great Vibes", cursive;
   font-size: 48px;
   color: crimson;
+  text-shadow: 1px 1px 0px #fff;
 }
 .romantic-text p {
   font-size: 20px;
-  color: #c5c5c5;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -79,20 +92,25 @@ main {
 }
 .love-counter h2 {
   color: crimson;
+  font-size: 30px;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 0px #fff;
 }
 .love-counter #counter {
   font-size: 22px;
   font-weight: bold;
 }
 
+.final-message h3 {
+  font-size: 40px;
+  color: crimson;
+  text-shadow: 1px 1px 0px #fff;
+}
 .final-message h2 {
   font-size: 40px;
-  font-family: "Great Vibes", cursive;
-  color: black;
-  background: linear-gradient(to right, crimson, rgb(112, 1, 1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: crimson;
+  text-align: center;
+  text-shadow: 1px 1px 0px #fff;
 }
 
 .uiverse .cssload-main {
@@ -228,6 +246,36 @@ main {
     transform: scale(0.5);
     border-color: rgb(228, 228, 228);
   }
+}
+
+#playButtonOverlay {
+  position: fixed;
+  z-index: 9999;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#playButtonOverlay button {
+  background: crimson;
+  color: #fff;
+  font-size: 17px;
+  padding: 15px 30px;
+  border: none;
+  width: 50%;
+  font-weight: 700;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px crimson;
+  transition: background 0.3s ease;
+}
+#playButtonOverlay button:hover {
+  background: darkred;
 }
 
 footer {
